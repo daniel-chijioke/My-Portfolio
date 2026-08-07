@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chijioke-daniel.vercel.app/sitemap.xml
