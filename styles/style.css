@@ -600,11 +600,25 @@ footer{
   from{opacity:0;transform:translateY(22px);}
   to{opacity:1;transform:translateY(0);}
 }
-.reveal{
-  opacity:0;transform:translateY(28px);
-  transition:opacity .65s ease,transform .65s ease;
+
+/* Default state: fully visible for search engine bots and JS fallbacks */
+.reveal {
+  opacity: 1;
+  transform: none;
 }
-.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* Hidden only when JS is confirmed running on a real user browser */
+.js-active .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.js-active .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .d1{transition-delay:.07s;} .d2{transition-delay:.14s;} .d3{transition-delay:.21s;} .d4{transition-delay:.28s;}
 
 /* ══════════════ RESPONSIVE ══════════════ */
