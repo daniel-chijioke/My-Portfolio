@@ -609,7 +609,7 @@ footer{
 
 /* Hidden only when JS is confirmed running on a real user browser */
 .js-active .reveal {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(28px);
   transition: opacity .65s ease, transform .65s ease;
 }
