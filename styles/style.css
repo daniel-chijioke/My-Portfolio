@@ -599,7 +599,7 @@ footer{
 
 @keyframes fadeUp{
 
-  from{opacity:0;transform:translateY(22px);}
+  from{opacity:1;transform:translateY(0px);}
 
   to{opacity:1;transform:translateY(0);}
 
