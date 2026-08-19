@@ -42,3 +42,24 @@ function handleSubmit(e){
     e.target.reset();
   }, 3500);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Activate animations only for real browsers running JavaScript
+  document.body.classList.add("js-active");
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Stop observing once revealed
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  reveals.forEach((el) => observer.observe(el));
+});
