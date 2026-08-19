@@ -607,7 +607,7 @@ footer{
 
 .reveal{
 
-  opacity:0;transform:translateY(28px);
+  opacity:1;transform:translateY(28px);
 
   transition:opacity .65s ease,transform .65s ease;
 
