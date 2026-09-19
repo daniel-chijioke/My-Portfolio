@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.chijioke-daniel.vercel.app"
+        }
+      ],
+      "destination": "https://chijioke-daniel.vercel.app/:path*",
+      "permanent": true
+    }
+  ]
+}
